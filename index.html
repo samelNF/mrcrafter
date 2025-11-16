@@ -13,7 +13,7 @@
       background:#1e1e1e; 
       color:#fff; 
       flex-direction:column; 
-      padding:10px; /* espaço nas bordas em celular */
+      padding:10px;
       box-sizing:border-box;
     }
 
@@ -41,6 +41,7 @@
     .btn-server {
       display:flex;
       align-items:center;
+      justify-content:center;
       gap:10px;
       padding:12px 25px;
       font-size:1rem;
@@ -50,8 +51,9 @@
       border-radius:10px;
       color:#fff;
       margin:10px 0;
-      flex-wrap:wrap; /* permite quebrar se precisar em telas pequenas */
-      justify-content:center;
+      flex-wrap:wrap;
+      text-align:center;
+      width:250px; /* tamanho fixo pra consistência */
     }
 
     .btn-server img {
@@ -66,23 +68,11 @@
       background:#45a049;
     }
 
-    /* media query pra celulares pequenos */
     @media (max-width:480px){
-      .circulo {
-        width:90px;
-        height:90px;
-      }
-      .btn-server img {
-        width:30px;
-        height:30px;
-      }
-      .btn-server {
-        font-size:0.9rem;
-        padding:10px 15px;
-      }
-      h1 {
-        font-size:1.2rem;
-      }
+      .circulo { width:90px; height:90px; }
+      .btn-server img { width:30px; height:30px; }
+      .btn-server { font-size:0.9rem; padding:10px 15px; width:200px; }
+      h1 { font-size:1.2rem; }
     }
   </style>
 </head>
@@ -92,5 +82,23 @@
     <h1>MreCrafter</h1>
   </div>
 
-  <button class="btn-server" onclick="window.location.href='minecraft://?addExternalServer=MreCrafter:mrecrafter.progamer:19132'">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícon_
+  <!-- Botão seguro do Minecraft -->
+  <button class="btn-server" onclick="alert('Abra o Minecraft Bedrock e use este IP: mrecrafter.progamer:19132')">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
+    Server MC Bedrock
+  </button>
+
+  <!-- Botão Discord -->
+  <button class="btn-server" onclick="window.location.href='https://discord.gg/5EFK9wVNT9'">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Ícone 2">
+    Discord
+  </button>
+
+  <!-- Botão TikTok -->
+  <button class="btn-server" onclick="window.location.href='https://www.tiktok.com/@mrecrafter.server'">
+    <img src="https://img.freepik.com/fotos-premium/logotipo-do-tiktok_1080029-103.jpg?semt=ais_incoming&w=740&q=80" alt="Ícone 3">
+    TikTok
+  </button>
+
+</body>
+</html>
