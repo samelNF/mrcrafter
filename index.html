@@ -8,18 +8,22 @@
       display:flex; 
       justify-content:center; 
       align-items:center; 
-      height:100vh; 
+      min-height:100vh; 
       font-family:sans-serif; 
       background:#1e1e1e; 
       color:#fff; 
       flex-direction:column; 
+      padding:10px; /* espaço nas bordas em celular */
+      box-sizing:border-box;
     }
+
     .perfil {
       display:flex;
       flex-direction:column;
       align-items:center;
       margin-bottom:20px;
     }
+
     .circulo {
       width:120px;
       height:120px;
@@ -27,22 +31,29 @@
       object-fit:cover;
       border:3px solid #4caf50;
     }
+
     h1 {
       margin:10px 0;
+      font-size:1.5rem;
+      text-align:center;
     }
+
     .btn-server {
       display:flex;
       align-items:center;
       gap:10px;
-      padding:15px 30px;
-      font-size:20px;
+      padding:12px 25px;
+      font-size:1rem;
       cursor:pointer;
       background:#4caf50;
       border:none;
       border-radius:10px;
       color:#fff;
-      margin:10px 0; /* espaço entre os botões */
+      margin:10px 0;
+      flex-wrap:wrap; /* permite quebrar se precisar em telas pequenas */
+      justify-content:center;
     }
+
     .btn-server img {
       width:40px;
       height:40px;
@@ -50,8 +61,28 @@
       object-fit:cover;
       border:2px solid #fff;
     }
+
     .btn-server:hover { 
       background:#45a049;
+    }
+
+    /* media query pra celulares pequenos */
+    @media (max-width:480px){
+      .circulo {
+        width:90px;
+        height:90px;
+      }
+      .btn-server img {
+        width:30px;
+        height:30px;
+      }
+      .btn-server {
+        font-size:0.9rem;
+        padding:10px 15px;
+      }
+      h1 {
+        font-size:1.2rem;
+      }
     }
   </style>
 </head>
@@ -62,19 +93,4 @@
   </div>
 
   <button class="btn-server" onclick="window.location.href='minecraft://?addExternalServer=MreCrafter:mrecrafter.progamer:19132'">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
-    Server MC Bedrock
-  </button>
-
-  <button class="btn-server" onclick="window.location.href='https://discord.gg/5EFK9wVNT9'">
-    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Ícone 2">
-    Discord
-  </button>
-
-  <button class="btn-server" onclick="window.location.href='https://www.tiktok.com/@mrecrafter.server'">
-    <img src="https://img.freepik.com/fotos-premium/logotipo-do-tiktok_1080029-103.jpg?semt=ais_incoming&w=740&q=80" alt="Ícone 3">
-    Tiktok
-  </button>
-
-</body>
-</html>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícon_
