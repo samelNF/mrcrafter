@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>MreCrafter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { 
       display:flex; 
       justify-content:center; 
       align-items:center; 
-      min-height:100vh; 
+      height:100vh; 
       font-family:sans-serif; 
       background:#1e1e1e; 
       color:#fff; 
       flex-direction:column; 
       padding:10px;
       box-sizing:border-box;
+    }
+
+    .guia {
+      width:350px;
+      margin-bottom:20px;
+      border-radius:10px;
+      overflow:hidden;
+      border:3px solid #4caf50;
     }
 
     .perfil {
@@ -54,8 +61,7 @@
       margin:10px 0;
       flex-wrap:wrap;
       text-align:center;
-      width:90%; /* botão ocupa quase toda largura da tela */
-      max-width:300px;
+      width:300px;
     }
 
     .btn-server img {
@@ -70,22 +76,20 @@
       background:#45a049;
     }
 
-    @media (max-width:480px){
-      .circulo { width:90px; height:90px; }
-      .btn-server img { width:30px; height:30px; }
-      .btn-server { font-size:0.9rem; padding:10px 15px; }
-      h1 { font-size:1.2rem; }
-    }
   </style>
 </head>
 <body>
+
+  <!-- Foto guia/tutorial no topo -->
+  <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/2d8df5fb2829f8be547911afa0a4d3f2~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=66e7f677&x-expires=1763427600&x-signature=s2uMF%2Fg07zut9yzvzGpmqZ5rKyQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my3" alt="Guia de como adicionar o server" class="guia">
+
   <div class="perfil">
     <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/2d8df5fb2829f8be547911afa0a4d3f2~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=66e7f677&x-expires=1763427600&x-signature=s2uMF%2Fg07zut9yzvzGpmqZ5rKyQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my3" alt="Foto do Server" class="circulo">
     <h1>MreCrafter</h1>
   </div>
 
-  <!-- Botão seguro do Minecraft: copia o IP -->
-  <button class="btn-server" onclick="navigator.clipboard.writeText('mrecrafter.progamer:19132'); alert('IP do servidor copiado! Abra o Minecraft Bedrock e cole o IP.')">
+  <!-- Botão do Minecraft -->
+  <button class="btn-server" onclick="alert('Abra o Minecraft Bedrock e use este IP: mrecrafter.progamer:19132')">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
     Server MC Bedrock
   </button>
