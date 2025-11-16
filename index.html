@@ -1,19 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Adicionar Server Minecraft</title>
+  <title>MreCrafter</title>
   <style>
-    body { display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; background:#1e1e1e; color:#fff; flex-direction:column }
-    button { padding:20px 40px; font-size:20px; cursor:pointer; background:#4caf50; border:none; border-radius:10px; color:#fff }
-    button:hover { background:#45a049 }
+    body { 
+      display:flex; 
+      justify-content:center; 
+      align-items:center; 
+      height:100vh; 
+      font-family:sans-serif; 
+      background:#1e1e1e; 
+      color:#fff; 
+      flex-direction:column; 
+    }
+    .perfil {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-bottom:20px;
+    }
+    .circulo {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #4caf50;
+    }
+    h1 {
+      margin:10px 0;
+    }
+    .btn-server {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:15px 30px;
+      font-size:20px;
+      cursor:pointer;
+      background:#4caf50;
+      border:none;
+      border-radius:10px;
+      color:#fff;
+      margin:10px 0; /* espaço entre os botões */
+    }
+    .btn-server img {
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid #fff;
+    }
+    .btn-server:hover { 
+      background:#45a049;
+    }
   </style>
 </head>
 <body>
-  <h1>Adicionar Server Minecraft</h1>
-  <button onclick="window.location.href='minecraft://?addExternalServer=MerCrafter:mrecrafter.progamer:19132'">
-    Adicionar Server
+  <div class="perfil">
+    <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/2d8df5fb2829f8be547911afa0a4d3f2~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=66e7f677&x-expires=1763427600&x-signature=s2uMF%2Fg07zut9yzvzGpmqZ5rKyQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my3" alt="Foto do Server" class="circulo">
+    <h1>MreCrafter</h1>
+  </div>
+
+  <button class="btn-server" onclick="window.location.href='minecraft://?addExternalServer=MreCrafter:mrecrafter.progamer:19132'">
+    <img src="https://static.wikia.nocookie.net/logopedia/images/0/0f/Minecraft_Bedrock_2023.svg/revision/latest?cb=20230920113315" alt="Ícone 1">
+    Server MC Bedrock
   </button>
+
+  <button class="btn-server" onclick="window.location.href='https://discord.gg/5EFK9wVNT9'">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Ícone 2">
+    Discord
+  </button>
+
+  <button class="btn-server" onclick="window.location.href='https://www.tiktok.com/@mrecrafter.server'">
+    <img src="https://img.freepik.com/fotos-premium/logotipo-do-tiktok_1080029-103.jpg?semt=ais_incoming&w=740&q=80" alt="Ícone 3">
+    Tiktok
+  </button>
+
 </body>
 </html>
