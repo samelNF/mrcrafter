@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>MreCrafter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { 
       display:flex; 
@@ -53,7 +54,8 @@
       margin:10px 0;
       flex-wrap:wrap;
       text-align:center;
-      width:250px; /* tamanho fixo pra consistência */
+      width:90%; /* botão ocupa quase toda largura da tela */
+      max-width:300px;
     }
 
     .btn-server img {
@@ -71,7 +73,7 @@
     @media (max-width:480px){
       .circulo { width:90px; height:90px; }
       .btn-server img { width:30px; height:30px; }
-      .btn-server { font-size:0.9rem; padding:10px 15px; width:200px; }
+      .btn-server { font-size:0.9rem; padding:10px 15px; }
       h1 { font-size:1.2rem; }
     }
   </style>
@@ -82,8 +84,8 @@
     <h1>MreCrafter</h1>
   </div>
 
-  <!-- Botão seguro do Minecraft -->
-  <button class="btn-server" onclick="alert('Abra o Minecraft Bedrock e use este IP: mrecrafter.progamer:19132')">
+  <!-- Botão seguro do Minecraft: copia o IP -->
+  <button class="btn-server" onclick="navigator.clipboard.writeText('mrecrafter.progamer:19132'); alert('IP do servidor copiado! Abra o Minecraft Bedrock e cole o IP.')">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
     Server MC Bedrock
   </button>
