@@ -75,6 +75,76 @@
   </div>
 
   <!-- Botão do Minecraft -->
+  <button class="btn-server" onclick="copiarServidor()">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
+    Copiar IP/Porta Minecraft
+  </button>
+
+  <!-- Botão Discord -->
+  <button class="btn-server" onclick="window.location.href='https://discord.gg/5EFK9wVNT9'">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Ícone 2">
+    Discord
+  </button>
+
+  <!-- Botão TikTok -->
+  <button class="btn-server" onclick="window.location.href='https://www.tiktok.com/@mrecrafter.server'">
+    <img src="https://img.freepik.com/fotos-premium/logotipo-do-tiktok_1080029-103.jpg?semt=ais_incoming&w=740&q=80" alt="Ícone 3">
+    TikTok
+  </button>
+
+  <script>
+    function copiarServidor() {
+      const texto = `Bedrock: mrecrafter.aternos.me:64624\nJava: mrecrafter.aternos.me:64624`;
+      navigator.clipboard.writeText(texto).then(() => {
+        alert("IP/Porta copiado pro clipboard!\nCole no seu Minecraft");
+      }).catch(() => {
+        alert("Não deu pra copiar, copie manualmente:\n" + texto);
+      });
+    }
+  </script>
+
+</body>
+</html>    }
+
+    .btn-server {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 25px;
+      font-size:1rem;
+      cursor:pointer;
+      background:#4caf50;
+      border:none;
+      border-radius:10px;
+      color:#fff;
+      margin:10px 0;
+      flex-wrap:wrap;
+      text-align:center;
+      width:300px; /* tamanho fixo pra PC */
+    }
+
+    .btn-server img {
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid #fff;
+    }
+
+    .btn-server:hover { 
+      background:#45a049;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="perfil">
+    <img src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/2d8df5fb2829f8be547911afa0a4d3f2~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=66e7f677&x-expires=1763427600&x-signature=s2uMF%2Fg07zut9yzvzGpmqZ5rKyQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my3" alt="Foto do Server" class="circulo">
+    <h1>MreCrafter</h1>
+  </div>
+
+  <!-- Botão do Minecraft -->
   <button class="btn-server" onclick="window.location.href='minecraft://?addExternalServer=MreCrafter&ip=mrecrafter.aternos.me&port=64624'">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
     Server MC Bedrock
