@@ -74,10 +74,22 @@
     <h1>MreCrafter</h1>
   </div>
 
-  <!-- Botão do Minecraft -->
-  <button class="btn-server" onclick="copiarServidor()">
+  <!-- Botão Bedrock IP -->
+  <button class="btn-server" onclick="copiarBedrockIP()">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
-    Copiar IP/Porta Minecraft
+    Copiar IP Bedrock
+  </button>
+
+  <!-- Botão Bedrock Porta -->
+  <button class="btn-server" onclick="copiarBedrockPorta()">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
+    Copiar Porta Bedrock
+  </button>
+
+  <!-- Botão Java -->
+  <button class="btn-server" onclick="copiarJava()">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBwT48d7CmJGTLMCt46zK_1SelJNSNfxnD6g&s" alt="Ícone 1">
+    Copiar IP/Porta Java
   </button>
 
   <!-- Botão Discord -->
@@ -93,10 +105,28 @@
   </button>
 
   <script>
-    function copiarServidor() {
-      const texto = `Bedrock: mrecrafter.aternos.me:64624\nJava: mrecrafter.aternos.me:64624`;
+    function copiarBedrockIP() {
+      const texto = `mrecrafter.aternos.me`;
       navigator.clipboard.writeText(texto).then(() => {
-        alert("IP/Porta copiado pro clipboard!\nCole no seu Minecraft");
+        alert("IP Bedrock copiado pro clipboard!\nCole no seu Minecraft Bedrock");
+      }).catch(() => {
+        alert("Não deu pra copiar, copie manualmente:\n" + texto);
+      });
+    }
+
+    function copiarBedrockPorta() {
+      const texto = `64624`;
+      navigator.clipboard.writeText(texto).then(() => {
+        alert("Porta Bedrock copiada pro clipboard!\nCole no seu Minecraft Bedrock");
+      }).catch(() => {
+        alert("Não deu pra copiar, copie manualmente:\n" + texto);
+      });
+    }
+
+    function copiarJava() {
+      const texto = `mrecrafter.aternos.me:64624`;
+      navigator.clipboard.writeText(texto).then(() => {
+        alert("IP/Porta Java copiado pro clipboard!\nCole no seu Minecraft Java");
       }).catch(() => {
         alert("Não deu pra copiar, copie manualmente:\n" + texto);
       });
